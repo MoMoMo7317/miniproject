@@ -1,0 +1,97 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  animation: App-logo-spin infinite 15s linear; /* เพิ่มการหมุนที่เร็วขึ้น */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 15s linear;
+  }
+}
+
+.App-header {
+  background-color: #f8d8d8; /* สีชมพูพาสเทลอ่อน */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #5f5a5a;
+  background-image: url('https://www.transparenttextures.com/patterns/circles.png'); /* เพิ่มพื้นหลังลายวงกลมอ่อนๆ */
+}
+
+.App-link {
+  color: #ff66b2; /* สีชมพูสดใส */
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.custom-navbar {
+  background: linear-gradient(90deg, #f8c9d8, #ffd9f1); /* โทนสีชมพูพาสเทล */
+  padding: 10px 0;
+}
+
+.custom-navbar .nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: 0.3s ease;
+  color: #e7a9c3; /* สีชมพูพาสเทลเข้ม */
+}
+
+.custom-navbar .nav-link:hover {
+  color: #ff66b2 !important; /* เมื่อเลื่อนเมาส์สีจะเปลี่ยนเป็นชมพูสดใส */
+}
+
+.btn-rounded {
+  border-radius: 50px; /* ทำให้ปุ่มกลมเหมือนหูหรือขนนุ่ม */
+  font-weight: bold;
+  transition: 0.3s;
+  background-color: #ffe0f1; /* สีชมพูอ่อน */
+  color: #5f5a5a;
+  padding: 12px 24px;
+  box-shadow: 0 4px 10px rgba(255, 105, 180, 0.5); /* เงาสีชมพูอ่อน */
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* ฟอนต์น่ารักๆ */
+}
+
+.btn-rounded:hover {
+  background-color: #ff66b2 !important; /* เมื่อคลิกเปลี่ยนเป็นสีชมพูสดใส */
+  color: #fff !important;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.7); /* เพิ่มความเงามากขึ้นเมื่อโฮเวอร์ */
+}
+
+.falling-star {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #ffffff; /* กระต่ายมีขนขาว */
+  border-radius: 50%;
+  animation: fallingStarAnimation 3s linear infinite;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
+}
+
+.falling-star:nth-child(odd) {
+  background-color: #ffb3d9; /* สีชมพูพาสเทล */
+}
+
+.falling-star:nth-child(even) {
+  background-color: #ffe0f1; /* สีชมพูอ่อน */
+}
+
+@keyframes fallingStarAnimation {
+  0% { transform: translateY(-100vh) scale(0.5); opacity: 1; }
+  100% { transform: translateY(100vh) scale(1.5); opacity: 0; }
+}
